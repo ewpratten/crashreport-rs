@@ -24,3 +24,6 @@ backtrace = "0.3.64"
 [features]
 default = ["color"]
 color = []
+
+# Provider assumptions
+assume_github = []
