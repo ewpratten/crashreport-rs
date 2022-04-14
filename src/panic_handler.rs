@@ -12,7 +12,6 @@
 
 use std::panic::PanicInfo;
 
-use backtrace::Backtrace;
 use colored::Colorize;
 use supports_hyperlinks::Stream;
 use terminal_link::Link;

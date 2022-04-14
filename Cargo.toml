@@ -1,6 +1,6 @@
 [package]
 name = "crashreport"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Evan Pratten <ewpratten@gmail.com>"]
 edition = "2021"
 description = "Automatic GitHub crash reporting system for any Rust crate"
@@ -19,7 +19,6 @@ supports-hyperlinks = "^1.2.0"
 terminal-link = "0.1.0"
 url = "2.2.2"
 urlencoding = "2.1.0"
-backtrace = "0.3.64"
 
 [features]
 default = ["color"]
