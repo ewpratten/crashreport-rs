@@ -1,3 +1,5 @@
+<img src="./crashreport_screenshot.png" style="margin:auto">
+
 # crashreport-rs
 [![Crates.io](https://img.shields.io/crates/v/crashreport)](https://crates.io/crates/crashreport) 
 [![Docs.rs](https://docs.rs/crashreport/badge.svg)](https://docs.rs/crashreport) 
