@@ -9,6 +9,7 @@ use crate::panic_handler::CargoPanicMetadata;
 #[derive(Debug)]
 pub enum RepositoryProvider {
     GitHub(Url),
+    GitLab(Url),
 }
 
 impl RepositoryProvider {
@@ -42,7 +43,14 @@ impl RepositoryProvider {
                 output_url.set_path(&format!("{}/issues/new", path));
                 output_url.set_query(Some(&format!("body={}&labels=bug", urlencoding::encode(&body))));
                 output_url
-            }
+            },
+            RepositoryProvider::GitLab(url) => {
+                let mut output_url = url.clone();
+                let path = url.path();
+                output_url.set_path(&format!("{}/issues/new", path));
+                output_url.set_query(Some(&format!("issue[description]={}&issuable_template=bug", urlencoding::encode(&body))));
+                output_url
+            },
         }
     }
 }

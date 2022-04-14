@@ -27,3 +27,4 @@ color = []
 
 # Provider assumptions
 assume_github = []
+assume_gitlab = []

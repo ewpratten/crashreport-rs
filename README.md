@@ -54,10 +54,14 @@ pub fn main() {
 As of now, we support the following hosted Git services:
 
 - GitHub
+- GitLab
 
 If you happen to be using a self-hosted version of any of these services, `crashreport` will *not* pick it up automatically. Instead, enable one of the following features to force override provider resolution:
 
 - `assume_github`
+- `assume_gitlab`
+
+*Enabling more than one of these features will result in the first being used*
 
 ### Terminal URLs
 
