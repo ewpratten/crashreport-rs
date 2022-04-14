@@ -1,7 +1,7 @@
-use crashreport::enable_issue_tracking;
+use crashreport::crashreport;
 
 pub fn main() {
-    enable_issue_tracking!();
+    crashreport!();
 
     panic!("This is a panic!");
 }

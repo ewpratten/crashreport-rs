@@ -70,7 +70,7 @@ mod repository;
 
 /// A macro that performs all the necessary steps to make sure that crash reporting is enabled
 #[macro_export]
-macro_rules! enable_issue_tracking {
+macro_rules! crashreport {
     () => {
         // Build the metadata from the build environment
         let metadata = crashreport::panic_handler::CargoPanicMetadata {
