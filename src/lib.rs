@@ -64,3 +64,26 @@
     nonstandard_style,
     rust_2018_idioms
 )]
+
+pub mod panic_handler;
+mod repository;
+
+/// A macro that performs all the necessary steps to make sure that crash reporting is enabled
+#[macro_export]
+macro_rules! enable_issue_tracking {
+    () => {
+        // Build the metadata from the build environment
+        let metadata = crashreport::panic_handler::CargoPanicMetadata {
+            repository: option_env!("CARGO_PKG_REPOSITORY").map(|s| s.to_string()),
+            version: env!("CARGO_PKG_VERSION").to_string(),
+            pkg_name: env!("CARGO_PKG_NAME").to_string(),
+            crate_name: env!("CARGO_CRATE_NAME").to_string(),
+        };
+
+        // Append the new panic handler
+        crashreport::panic_handler::append_panic_handler(
+            crashreport::panic_handler::ph_suggest_issue_tracker,
+            metadata,
+        );
+    };
+}

@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cargo",
+			"command": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "rust: cargo build"
+		}, 
+		{
+			"type": "cargo",
+			"command": "run",
+			"args": [
+				"--example",
+				"crash"
+			],
+			"problemMatcher": [
+				"$rustc"
+			],
+			"label": "rust: run example",
+		}, 
+		{
+			"type": "cargo",
+			"command": "run",
+			"args": [
+				"--example",
+				"crash",
+				"--no-default-features"
+			],
+			"problemMatcher": [
+				"$rustc"
+			],
+			"label": "rust: run example (no color)",
+		}
+	]
+}
