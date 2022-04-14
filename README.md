@@ -1,4 +1,4 @@
-<img src="./crashreport_screenshot.png" style="margin:auto">
+<img src="https://github.com/Ewpratten/crashreport-rs/raw/master/crashreport_screenshot.png" style="margin:auto">
 
 # crashreport-rs
 [![Crates.io](https://img.shields.io/crates/v/crashreport)](https://crates.io/crates/crashreport) 
