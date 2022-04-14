@@ -15,7 +15,7 @@ categories = []
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
 colored = "2.0.0"
-supports-hyperlinks = "1.2.0"
+supports-hyperlinks = "^1.2.0"
 terminal-link = "0.1.0"
 url = "2.2.2"
 urlencoding = "2.1.0"
