@@ -68,3 +68,7 @@ If you happen to be using a self-hosted version of any of these services, `crash
 Whenever possible, `crashreport` will try to make clickable buttons in your terminal. The work of deciding weather the terminal supports this is carried out by the [`supports-hyperlinks`](https://github.com/zkat/supports-hyperlinks) crate. If issues arise, please open an issue over there to add support. 
 
 Worst case, you can force-disable button creation (falling back on printing out a URL) by setting `FORCE_HYPERLINK=0` in your environment.
+
+## Meta crashes
+
+Did you manage to crash `crashreport` itself? Panics caused inside of panic handlers produce large stacktraces. Just open an issue in this repository with your stack trace, and I will try to help you out.
